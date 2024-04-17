@@ -1,1 +1,15 @@
 #Problem3
+def order(order):
+    order_stack = []
+    for item in reversed(order):
+        order_stack.append(item)
+    
+    for current_order in range(len(order_stack)):
+        current_order = order_stack.pop()
+        print("Preparing your Order -", current_order)
+
+    print("\nThe following orders have been dispatched:")
+    for item in order:
+        print(item)
+orders = ["palak paneer", "bhindi", "dal"]
+order(orders)
