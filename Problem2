@@ -1,29 +1,17 @@
 #problem2
+
 def get_tshirt(size):
     def get_name():
         n = input()
         return n
-    
-    available = input()
-    brands = []
-    available_brand = ''
-    for char in available: 
-        if char == ',':
-            brands.append(available_brand)
-            available_brand = ''
-        else:
-            available_brand += char
-    if available_brand:  
-        brands.append(available_brand)
-    
-    brand_want = input()
     user_name = get_name()
     
-    
+    brands = ["Adidas","zudio","zara"]
+    brand_want = input()
     if brand_want in brands:
-        print("Hi, " + user_name + ", the brand you are looking for is available in "+size+" size in our store")
+        print("Hi, ", user_name , "the brand you are looking for is available in",size, "size in our store")
     else:
-        print("Hi, " + user_name + ", unfortunately the brand you are looking for is not available in "+size+" size in our store")
+        print("Hi," , user_name , "unfortunately the brand you are looking for is not available in",size, "our store")
 
 Size=input()
 get_tshirt(Size)
