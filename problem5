@@ -1,1 +1,25 @@
 #problem5
+def future_gain(annual_site_profit, current_conversion_rate, improved_conversion_rate, expected_project_life, improvement_cost, increase_conversion_rate):
+    return ((annual_site_profit * (improved_conversion_rate / current_conversion_rate)) - annual_site_profit) * (((1 + increase_conversion_rate) ** expected_project_life) - 1) / increase_conversion_rate - improvement_cost * ((1 + increase_conversion_rate) ** expected_project_life)
+
+def total_gain(future_gain, increase_conversion_rate, expected_project_life):
+    return future_gain / ((1 + increase_conversion_rate) ** expected_project_life)
+
+def annual_gain(total_gain, expected_project_life):
+    return total_gain / expected_project_life
+
+def annual_roi(annual_gain, improvement_cost):
+    return annual_gain / improvement_cost
+
+def total_roi(total_gain, improvement_cost):
+    return total_gain / improvement_cost
+fg=future_gain(100000,0.08,0.10,5,5000,0.02)
+tg=total_gain(100000,0.02,5)
+ag=annual_gain(10000,5)
+ar=annual_roi(100000,5000)
+tr=total_roi(100000,5000)
+print(fg)
+print(tg)
+print(ag)
+print(ar)
+print(tr)
